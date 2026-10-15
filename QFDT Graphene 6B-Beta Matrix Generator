@@ -1,0 +1,29 @@
+markdown
+# QFDT Graphene 6B-Beta Matrix Generator
+
+This repository contains the official, automated implementation of the **6B re-entrant honeycomb perforation matrix** for graphene monolayers, calibrated according to the **Quantum Field Density Theory (QFDT)** paradigm.
+
+## Overview
+The script mathematically models a 2D Dirac electron fluid flowing at u = 5 × 10⁴ m/s. It utilizes a built-in Lyapunov stability verification gate to ensure the engineered nanostructure induces an artificial auxeticity (\(\sigma_P \rightarrow -1\)), effectively reducing the electron fluid's kinematic viscosity down to \(\nu_{eff} \le 1.0000 \times 10^{-5} \text{ m}^2/\text{s}\). 
+
+Once the mathematical optimization constraints for the **6B-Beta (optimal)** configuration are satisfied, the script automatically compiles and exports a production-ready **GDSII layout file** (`matryca_6b_beta.gds`) for high-precision nanostructure lithography.
+
+## Geometric Parameters (6B-Beta)
+- **Vertical/Oblique Bond Length (L):** 12.0 nm
+- **Recess Depth (D):** 8.5 nm
+- **Rib Width (W):** 3.5 nm
+- **Grid Pitch:** 25.0 nm
+
+## Features
+- **QFDT Metrology Module:** Calculates Fermi velocity shifts \(v_F(r)\) and local enstrophy dissipation bounds.
+- **Lyapunov Safety Gate:** Prevents GDSII compilation if the geometric dimensions lead to immediate vortex dissipation (e.g., standard lattice or 6B-Alpha configurations).
+- **Industrial Scale Output:** Generates a full 100 × 100 cell array using `gdspy`.
+
+## Requirements
+- Python 3.x
+- NumPy
+- gdspy
+
+## Authors
+**Miecielica & AI**  
+*Quantum Field Density Theory Research Project, 2026*
